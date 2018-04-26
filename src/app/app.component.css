@@ -1,0 +1,44 @@
+:host {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.calc-container {
+    display: flex; 
+    height: 500px; 
+    border: solid 1px black; 
+    width: 452px; 
+    padding: 5px; 
+    flex-direction: column;
+}
+
+.calc-row {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+}
+
+.calc-btn {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+}
+
+.calc-btn-container {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.calc-display {
+    display: flex;
+    padding: 5px;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+}
