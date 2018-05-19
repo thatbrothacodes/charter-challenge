@@ -17,7 +17,7 @@ export class AppComponent {
   keyEvent(event: KeyboardEvent) {
     event.preventDefault();
 
-    if (event.keyCode === 8) {
+    if (event.keyCode === 8 && !this._resetInput) {
       this.backspace();
     }
   }
@@ -29,7 +29,9 @@ export class AppComponent {
 
   @Output()
   onBackspaceClick() {
-    this.backspace();
+    if (!this._resetInput) {
+      this.backspace();
+    }
   }
 
   @Output()
@@ -50,6 +52,17 @@ export class AppComponent {
   @Output()
   onMultiplyClick() {
     this.multiply();
+  }
+
+  @Output()
+  onInverseClick() {
+    if (!this._n1) {
+      this._n1 = Number.parseFloat(this._input);
+    }
+    this._input = (1 / this._n1).toString();
+    this._n1 = null;
+    this._n2 = null;
+    this._resetInput = true;
   }
 
   @Output()
