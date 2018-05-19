@@ -1,115 +1,165 @@
 <div class="calc-container">
-  <div class="calc-row">
-    <div class="calc-display">
-      {{input}}
-    </div>
+  <div class="display-row">
+     <div class="display-container">
+        {{input}}
+     </div>
   </div>
   <div class="calc-row">
-    <div class="calc-btn-container">
-      <button class="calc-btn"
-      mat-raised-button></button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn"
-      mat-raised-button></button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn"
-      mat-raised-button></button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onPercentageClick()"
-      mat-raised-button>%</button>
-    </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn"
+            (click)="onBackspaceClick()"
+            mat-raised-button>&#8592;</button>
+        </div>
+      </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn" (click)="onAllClearClick()"
+            mat-raised-button>AC</button>
+        </div>
+      </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn" (click)="onClearClick()"
+            mat-raised-button>CLR</button>
+        </div>
+      </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn" (click)="onNegativeClick()"
+            mat-raised-button>+/-</button>
+        </div>
+      </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn" (click)="onSquareRootClick()"
+            mat-raised-button>&#8730;</button>
+        </div>
+      </div>
   </div>
   <div class="calc-row">
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onAllClearClick()"
-      mat-raised-button>AC</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onClearClick()"
-      mat-raised-button>CLR</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onSquareRootClick()"
-      mat-raised-button>&#8730;</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onMultiplyClick()"
-      mat-raised-button>*</button>
-    </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn" 
+              (click)="onNumberClick($event)"
+              mat-raised-button>7</button>
+        </div>
+      </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn" 
+              (click)="onNumberClick($event)"
+              mat-raised-button>8</button>
+        </div>
+      </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn" 
+              (click)="onNumberClick($event)"
+              mat-raised-button>9</button>
+        </div>
+      </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn" 
+              (click)="onDivideClick()"
+              mat-raised-button>/</button>
+        </div>
+      </div>
+      <div class="calc-element-container">
+        <div class="calc-button-container">
+            <button class="calc-btn" 
+              (click)="onPercentageClick()"
+              mat-raised-button>%</button>
+        </div>
+      </div>
   </div>
   <div class="calc-row">
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onNumberClick($event)"
-      mat-raised-button>7</button>
+    <div class="calc-element-container">
+      <div class="calc-button-container">
+          <button class="calc-btn" (click)="onNumberClick($event)"
+          mat-raised-button>4</button>
+      </div>
     </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onNumberClick($event)"
-      mat-raised-button>8</button>
+    <div class="calc-element-container">
+      <div class="calc-button-container">
+          <button class="calc-btn" (click)="onNumberClick($event)"
+          mat-raised-button>5</button>
+      </div>
     </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onNumberClick($event)"
-      mat-raised-button>9</button>
+    <div class="calc-element-container">
+      <div class="calc-button-container">
+          <button class="calc-btn" (click)="onNumberClick($event)"
+          mat-raised-button>6</button>
+      </div>
     </div>
-    <div class="calc-btn-container">
-        <button class="calc-btn" (click)="onDivideClick()"
-        mat-raised-button>/</button>
+    <div class="calc-element-container">
+      <div class="calc-button-container">
+          <button class="calc-btn" (click)="onMultiplyClick()"
+          mat-raised-button>*</button>
+      </div>
     </div>
-  </div>
-  <div class="calc-row">
-    <div class="calc-btn-container">
-        <button class="calc-btn" (click)="onNumberClick($event)"
-        mat-raised-button>4</button>
-    </div>
-    <div class="calc-btn-container">
-        <button class="calc-btn" (click)="onNumberClick($event)"
-        mat-raised-button>5</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onNumberClick($event)"
-      mat-raised-button>6</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onAddClick()"
-      mat-raised-button>+</button>
+    <div class="calc-element-container">
+      <div class="calc-button-container">
+          <button class="calc-btn"
+          mat-raised-button>1/x</button>
+      </div>
     </div>
   </div>
-  <div class="calc-row">
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onNumberClick($event)"
-      mat-raised-button>1</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onNumberClick($event)"
-      mat-raised-button>2</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onNumberClick($event)"
-      mat-raised-button>3</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onSubtractClick()"
-      mat-raised-button>-</button>
-    </div>
-  </div>
-  <div class="calc-row">
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onNumberClick($event)"
-      mat-raised-button>0</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onDecimalClick()"
-      mat-raised-button>.</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onNegativeClick()"
-      mat-raised-button>+/-</button>
-    </div>
-    <div class="calc-btn-container">
-      <button class="calc-btn" (click)="onEqualClick()"
-      mat-raised-button>=</button>
-    </div>
+  <div class="calc-2x-row">
+      <div class="calc-4x-col">
+          <div class="calc-row">
+              <div class="calc-element-container">
+                  <div class="calc-button-container">
+                      <button class="calc-btn" (click)="onNumberClick($event)"
+                      mat-raised-button>1</button>
+                  </div>
+              </div>
+              <div class="calc-element-container">
+                  <div class="calc-button-container">
+                      <button class="calc-btn" (click)="onNumberClick($event)"
+                        mat-raised-button>2</button>
+                  </div>
+              </div>
+              <div class="calc-element-container">
+                  <div class="calc-button-container">
+                      <button class="calc-btn" (click)="onNumberClick($event)"
+                        mat-raised-button>3</button>
+                  </div>
+              </div>
+              <div class="calc-element-container">
+                  <div class="calc-button-container">
+                      <button class="calc-btn" (click)="onSubtractClick()"
+                        mat-raised-button>-</button>
+                  </div>
+              </div>
+          </div>
+          <div class="calc-row">
+              <div class="calc-2x-element-container">
+                  <div class="calc-button-container">
+                      <button class="calc-btn" (click)="onNumberClick($event)"
+                      mat-raised-button>0</button>
+                  </div>
+              </div>
+              <div class="calc-element-container">
+                  <div class="calc-button-container">
+                      <button class="calc-btn" (click)="onDecimalClick()"
+                        mat-raised-button>.</button>
+                  </div>
+              </div>
+              <div class="calc-element-container">
+                  <div class="calc-button-container">
+                      <button class="calc-btn" (click)="onAddClick()"
+                        mat-raised-button>+</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="calc-element-container">
+          <div class="calc-button-container">
+              <button class="calc-btn" (click)="onEqualClick()"
+                mat-raised-button>=</button>
+          </div>
+      </div>
   </div>
 </div>

@@ -28,6 +28,11 @@ export class AppComponent {
   }
 
   @Output()
+  onBackspaceClick() {
+    this.backspace();
+  }
+
+  @Output()
   onAddClick() {
     this.add();
   }
